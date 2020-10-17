@@ -1,8 +1,5 @@
 const fetch = require('node-fetch')
 
-const username = 'tom'
-const password = 'SuperSecretPassword!'
-
 const options = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
