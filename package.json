@@ -18,5 +18,8 @@
   "homepage": "https://github.com/vinnidias/teste-GEN#readme",
   "devDependencies": {
     "jest": "^26.5.3"
+  },
+  "dependencies": {
+    "axios": "^0.20.0"
   }
 }
