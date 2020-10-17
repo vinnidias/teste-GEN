@@ -3,8 +3,6 @@ const postMethod = require('./api-post-method')
 const username = 'tomsmith'
 const password = 'SuperSecret'
 
-const senhaErrada = '1234'
-
 test('should return status 200 when the declared username and password are passed', done => {
     postMethod(username, senhaErrada)
         .then(result => {
