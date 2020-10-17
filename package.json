@@ -20,6 +20,8 @@
     "jest": "^26.5.3"
   },
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "node-fetch": "^2.6.1",
+    "request-promise": "^4.2.6"
   }
 }
