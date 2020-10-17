@@ -1,0 +1,22 @@
+{
+  "name": "teste-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinnidias/teste-GEN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinnidias/teste-GEN/issues"
+  },
+  "homepage": "https://github.com/vinnidias/teste-GEN#readme",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}
