@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 
-const getInfo = async () => {
+const runTest = async () => {
     const browser = await puppeteer.launch({ headless: false })
     const page = await browser.newPage()
     await page.goto('https://the-internet.herokuapp.com/login')
@@ -8,14 +8,24 @@ const getInfo = async () => {
     //Require entries
     await page.waitFor('input[name="username"]')
     
+    console.log('Esperando pelos inputs')
+    
     await page.type('input[name="username"]', 'tomsmith', {delay: 100})
     await page.type('input[name="password"]', 'SuperSecretPassword!', {delay: 100})
     
+    console.log('digitou os inputs')
+    
     await page.screenshot({path: 'login-screenShot.png'})
+    
+    console.log('printou os inputs')
 
     await page.keyboard.press('Enter')
 
+    console.log('apertou Enter')
+
     //Page Secure Area
+
+    console.log('mudou de tela')
 
     await page.waitFor('.example > a')
     await page.screenshot({path: 'secure-area-screenshot.png'})
@@ -31,8 +41,6 @@ const getInfo = async () => {
     await page.click('.example > a')
 
     //The same overlap problem 
-
-
     await page.waitFor('#flash-messages > #flash > a')
     await page.click('#flash-messages > #flash > a')
 
@@ -40,6 +48,8 @@ const getInfo = async () => {
 
     //invalid username message 
     await page.waitFor('.radius')
+    await page.type('input[name="username"]', 'wrongName', {delay: 100})
+    await page.type('input[name="password"]', 'wrongpassword', {delay: 100})
     await page.click('.radius')
 
     await page.waitFor('#flash > a')
@@ -56,9 +66,12 @@ const getInfo = async () => {
     await page.screenshot({path: 'github-navigation.png'})
 
     await page.goBack()
+    
+    // footer link blank
+    await page.waitFor('#page-footer > .large-4 > div > a')
+    await page.click('#page-footer > .large-4 > div > a')
 
     await browser.close()
-    
 }
 
-getInfo()
+runTest()
