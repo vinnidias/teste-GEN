@@ -8,30 +8,18 @@ const runTest = async () => {
     //Require entries
     await page.waitFor('input[name="username"]')
     
-    console.log('Esperando pelos inputs')
-    
     await page.type('input[name="username"]', 'tomsmith', {delay: 100})
     await page.type('input[name="password"]', 'SuperSecretPassword!', {delay: 100})
     
-    console.log('digitou os inputs')
-    
     await page.screenshot({path: 'login-screenShot.png'})
-    
-    console.log('printou os inputs')
 
     await page.keyboard.press('Enter')
 
-    console.log('apertou Enter')
-
     //Page Secure Area
-
-    console.log('mudou de tela')
-
     await page.waitFor('.example > a')
     await page.screenshot({path: 'secure-area-screenshot.png'})
 
     //chromium is overlapping the component and the bot clicks the fork
-
     await page.waitFor('#flash-messages > #flash > a')
     await page.click('#flash-messages > #flash > a')
     await page.screenshot({path: 'wrong-bot-click.png'})
