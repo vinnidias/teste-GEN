@@ -1,16 +1,9 @@
-const fetch = require('node-fetch')
+const request = require('superagent')
 
 
 function postMethod(username, password) {
-    const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({username, password})
-    };
-    return fetch('https://the-internet.herokuapp.com/authenticate', options)
-
+    return request.post('https://the-internet.herokuapp.com/authenticate')
+        .send({username, password})
 }
 
 module.exports = postMethod
-
-
