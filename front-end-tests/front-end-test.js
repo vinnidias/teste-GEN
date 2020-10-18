@@ -11,12 +11,20 @@ const getInfo = async () => {
 
     //Require entries
     
-    await page.type('input[name="username"]', 'tomsmith', {delay: 200})
-    await page.type('input[name="password"]', 'SuperSecretPassword!', {delay: 200})
-
-    await page.screenshot({path: 'loginScreenShot.png'})
+    await page.type('input[name="username"]', 'tomsmith', {delay: 100})
+    await page.type('input[name="password"]', 'SuperSecretPassword!', {delay: 100})
+    
+    await page.screenshot({path: 'login-screenShot.png'})
 
     await page.keyboard.press('Enter')
+
+    //Page Secure Area
+
+    await page.waitFor('.example > a')
+    await page.screenshot({path: 'secure-area-screenshot.png'})
+    await page.click('.example > a')
+
+    await browser.close()
     
 }
 
