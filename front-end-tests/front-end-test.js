@@ -5,7 +5,7 @@ const runTest = async () => {
     const page = await browser.newPage()
     await page.goto('https://the-internet.herokuapp.com/login')
 
-    //Require entries
+    //Require entries for Api
     await page.waitFor('input[name="username"]')
     
     await page.type('input[name="username"]', 'tomsmith', {delay: 100})
