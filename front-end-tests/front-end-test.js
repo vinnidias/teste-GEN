@@ -40,12 +40,12 @@ const runTest = async () => {
     await page.type('input[name="password"]', 'wrongpassword', {delay: 100})
     await page.click('.radius')
 
-    await page.waitFor('#flash > a')
+    await page.waitFor('#flash-messages > #flash > a')
 
     await page.screenshot({path: 'ivalid-username-message.png'})
 
     //The same overlap problem
-    await page.click('#flash > a')
+    await page.click('#flash-messages > #flash > a')
     await page.goBack()
 
     // navigation for github
