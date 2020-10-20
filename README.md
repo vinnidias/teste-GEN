@@ -8,8 +8,8 @@ No primeiro teste é verificado um problema de responsividade e não é possíve
 No segundo o teste de front-end é realizado com a tela cheia com os mesmos eventos anteriores e não encontra nenhum problema.
 
 Nos testes da api, fiz os posts direto na api utilizando a biblioteca superagent para a requisição.
-Verifiquei dois cenários: primeiro seria com o usuário e senha corretos e o segundo com a senha incorreta.
-A api falhou no segundo teste pois na requisição direta, o status de retorno é ok com a senha errada.
+Verifiquei dois cenários: primeiro seria com os dados do usuário corretos e o segundo com os dados incorretos.
+A api falhou no segundo cenário pois na requisição direta, o status de retorno é ok mesmo com os dados errados.
 
 ## Instalação e Execução 
 
