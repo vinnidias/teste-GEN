@@ -15,7 +15,7 @@ A api falhou no segundo cenário pois na requisição direta, o status de retorn
 
 Para instalação: 
   - clone esse repositório em um repositório local;
-  - no terminal navegue até o repositório teste-GEN e rode comando npm install para instalar todas as dependências necesárias;
+  - no terminal navegue até o repositório teste-GEN e rode comando npm install para instalar todas as dependências necessárias;
 ```bash
 npm install
 ```
