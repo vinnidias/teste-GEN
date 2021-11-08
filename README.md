@@ -46,7 +46,7 @@ npm test
    
 ## Bibliotecas
 
-- [superagent: para as requisições](https://www.npmjs.com/package/superagent)
+- [PokéApi](https://www.npmjs.com/package/superagent)
 - [puppeteer: para o teste front-end](https://www.npmjs.com/package/puppeteer)
 - [jest: para os testes unitários da api](https://www.npmjs.com/package/jest)
    
